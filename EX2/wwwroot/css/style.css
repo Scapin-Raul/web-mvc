@@ -1,0 +1,11 @@
+body{
+    background-color: #eee;
+    margin: 0;
+    padding: 0em;
+}
+ul{
+    display: flex;
+}
+ul > li{
+    width: 10%;
+}

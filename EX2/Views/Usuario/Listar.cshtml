@@ -1,0 +1,45 @@
+@using EX2.Models;
+
+@{
+    Layout = "MasterPage";
+    ViewBag.Title = "Lista de Usuários";
+    
+}
+<h1>Lista de Usuárioskkjk</h1>
+<h2>@TempData["mensagem"]</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id </th>
+            <th>Nome </th>
+            <th>Email </th>
+            <th>Senha </th>
+            <th>Data Nascimento </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in ViewData["usuarios"] as List<UsuarioModel>)
+        {
+            if (item != null)
+            {
+                <tr>
+                    <td>@item.Id </td>
+                    <td>@item.Nome </td>
+                    <td>@item.Email </td>
+                    <td>@item.Senha </td>
+                    <td>@item.DataNascimento.ToShortDateString()</td>
+                    <td>
+                        <a href="/Usuario/Editar?id=@item.Id">EDITAR</a>
+                        <a href="">EXCLUIR</a>
+                    </td>
+                </tr>
+            }
+
+        }
+
+
+    </tbody>
+    
+</table>

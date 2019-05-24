@@ -11506,11 +11506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\46791749865\\Desktop\\PROJETOS WEBMVC\\EX3_HAMBURGUERIA\\EX3_HAMBURGUERIA.csproj",
+      "projectUniqueName": "C:\\Users\\46791749865\\Desktop\\web-mvc\\EX3_HAMBURGUERIA\\EX3_HAMBURGUERIA.csproj",
       "projectName": "EX3_HAMBURGUERIA",
-      "projectPath": "C:\\Users\\46791749865\\Desktop\\PROJETOS WEBMVC\\EX3_HAMBURGUERIA\\EX3_HAMBURGUERIA.csproj",
+      "projectPath": "C:\\Users\\46791749865\\Desktop\\web-mvc\\EX3_HAMBURGUERIA\\EX3_HAMBURGUERIA.csproj",
       "packagesPath": "C:\\Users\\46791749865\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\46791749865\\Desktop\\PROJETOS WEBMVC\\EX3_HAMBURGUERIA\\obj\\",
+      "outputPath": "C:\\Users\\46791749865\\Desktop\\web-mvc\\EX3_HAMBURGUERIA\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

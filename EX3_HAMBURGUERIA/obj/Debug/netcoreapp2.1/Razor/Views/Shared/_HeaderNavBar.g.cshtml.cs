@@ -58,7 +58,7 @@ using EX3_HAMBURGUERIA.Models;
             WriteLiteral("<nav>\r\n    <div class=\"section-container\">\r\n        <ul>\r\n            <li>");
             EndContext();
             BeginContext(74, 72, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "05a566808b114639b7afebae06b3adc2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2092dc4de2741a18a545e87ace88899", async() => {
                 BeginContext(133, 9, true);
                 WriteLiteral("Principal");
                 EndContext();
@@ -127,7 +127,7 @@ WriteAttributeValue("", 431, Url.Action("Index", "Home"), 431, 28, false);
             WriteLiteral(">Local</a></li>\r\n            <li>");
             EndContext();
             BeginContext(499, 74, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b2abc2ce52714271923cfb0d6a6cea6b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a8966f98c06d424e87f50f4eb98e144e", async() => {
                 BeginContext(561, 8, true);
                 WriteLiteral("Peça já!");
                 EndContext();

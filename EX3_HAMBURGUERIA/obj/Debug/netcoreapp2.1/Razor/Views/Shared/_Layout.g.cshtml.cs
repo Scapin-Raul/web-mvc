@@ -55,7 +55,7 @@ using EX3_HAMBURGUERIA.Models;
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"pt-br\">\r\n\r\n");
             EndContext();
             BeginContext(40, 403, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c539415f644646bcb5e6c6d322dc5088", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a19d2f954bc346178fc02c695b1b9197", async() => {
                 BeginContext(46, 241, true);
                 WriteLiteral("\r\n    <meta charset=\"UTF-8\">\r\n    <title>McBonald\'s</title>\r\n    <link href=\"https://fonts.googleapis.com/css?family=Londrina+Solid:900%7COpen+Sans\" rel=\"stylesheet\">\r\n    <link href=\"/css/style.css\" rel=\"stylesheet\" type=\"text/css\">\r\n    \r\n");
                 EndContext();
@@ -91,7 +91,7 @@ using EX3_HAMBURGUERIA.Models;
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(447, 422, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d227a93029984dfab4d32d34f0c68dbf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "645acc7a0af4493d9c96a6257e6aedfb", async() => {
                 BeginContext(476, 8, true);
                 WriteLiteral("\r\n\r\n    ");
                 EndContext();

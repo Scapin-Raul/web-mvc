@@ -1,0 +1,34 @@
+@using EX4_ESTACIONAMENTO.Models;
+
+<h2>Registros:</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nome </th>
+            <th>Modelo </th>
+            <th>Marca </th>
+            <th>Placa </th>
+            <th>Data de Entrada </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in ViewData["registros"] as List<RegistroModel>)
+        {
+            if (item != null)
+            {
+                <tr>
+                    <td>@item.Nome </td>
+                    <td>@item.Modelo </td>
+                    <td>@item.Marca </td>
+                    <td>@item.Placa </td>
+                    <td>@item.DataDeEntrada</td>
+                </tr>
+            }
+
+        }
+
+    </tbody>
+    
+</table>

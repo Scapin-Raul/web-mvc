@@ -1,3 +1,8 @@
+@model EX4_ESTACIONAMENTO.ViewModel.CadastroViewModel;
+@{
+    Layout="_Layout";
+}
+
 <h2>
     Cadastro de Usuarios:
 </h2>
@@ -8,14 +13,21 @@
     <br>
     <label for="modelo">Modelo</label>
     <select name="modelo" id="">
-        <option value=""></option>
-        <option value=""></option>
+        <option value="" disabled selected></option>
+        @foreach (var modelo in Model.Modelos)
+        {
+            <option value="@modelo.Nome">@modelo.Nome</option>
+        }
     </select>
 
     <label for="marca">Marca</label>    
     <select name="marca" id="">
-        <option value=""></option>
-        <option value=""></option>
+        <option value="" disabled selected ></option>
+        @foreach (var marca in Model.Marcas)
+        {
+            <option value="@marca.Nome">@marca.Nome</option>
+        }
+
     </select>
     
     <br>

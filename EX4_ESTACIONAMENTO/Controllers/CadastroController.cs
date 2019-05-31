@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using EX4_ESTACIONAMENTO.Models;
 using EX4_ESTACIONAMENTO.Repositorio;
+using EX4_ESTACIONAMENTO.ViewModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,7 +17,15 @@ namespace EX4_ESTACIONAMENTO.Controllers
 
         [HttpGet]
         public IActionResult Index(){
-            return View();
+            var Modelos = ModeloRepositorio.Listar();
+            var Marcas = MarcaRepositorio.Listar();
+
+            CadastroViewModel cadastro = new CadastroViewModel();
+            cadastro.Marcas = Marcas;
+            cadastro.Modelos = Modelos;
+
+
+            return View(cadastro);
         }
     
         [HttpPost]
@@ -29,14 +38,25 @@ namespace EX4_ESTACIONAMENTO.Controllers
 
             var registro = new RegistroModel();
             registro.Nome = form["nome"];
-            registro.Modelo = form["modelo"];
-            registro.Marca = form["marca"];
             registro.Placa = form["placa"];
             registro.DataDeEntrada = DateTime.Parse(form["dataDeEntrada"]);
+
+            MarcaModel marca = new MarcaModel();
+            marca.Nome = form["marca"];
+            
+            ModeloModel modelo = new ModeloModel();
+            modelo.Nome = form["modelo"];
+            
+            registro.Marca = marca;
+            registro.Modelo = modelo;
+
+            // registro.Modelo.Nome = form["modelo"];
+            // registro.Marca.Nome = form["marca"];
 
             registroRepositorio.Inserir(registro);
 
 
+            
             return RedirectToAction("Index","Cadastro");
         }
 

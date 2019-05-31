@@ -1,4 +1,7 @@
 @using EX4_ESTACIONAMENTO.Models;
+@{
+    Layout="_Layout";
+}
 
 <h2>Registros:</h2>
 
@@ -6,8 +9,8 @@
     <thead>
         <tr>
             <th>Nome </th>
-            <th>Modelo </th>
             <th>Marca </th>
+            <th>Modelo </th>
             <th>Placa </th>
             <th>Data de Entrada </th>
         </tr>
@@ -20,8 +23,8 @@
             {
                 <tr>
                     <td>@item.Nome </td>
-                    <td>@item.Modelo </td>
-                    <td>@item.Marca </td>
+                    <td>@item.Modelo.Nome </td>
+                    <td>@item.Marca.Nome </td>
                     <td>@item.Placa </td>
                     <td>@item.DataDeEntrada</td>
                 </tr>

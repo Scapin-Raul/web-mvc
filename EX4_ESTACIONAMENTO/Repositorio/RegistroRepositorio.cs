@@ -16,7 +16,7 @@ namespace EX4_ESTACIONAMENTO.Repositorio
                     File.Create(Path).Close();
                 }
 
-                var linha = $"{pedido.Nome};{pedido.Modelo};{pedido.Marca};{pedido.Placa};{pedido.DataDeEntrada}";
+                var linha = $"{pedido.Nome};{pedido.Modelo.Nome};{pedido.Marca.Nome};{pedido.Placa};{pedido.DataDeEntrada}";
 
                 File.AppendAllText(Path, linha + "\n");
 
@@ -38,17 +38,25 @@ namespace EX4_ESTACIONAMENTO.Repositorio
                     string[] linha = item.Split(";");
                     registro = new RegistroModel();
                     registro.Nome=linha[0];
-                    registro.Modelo=linha[1];
-                    registro.Marca=linha[2];
                     registro.Placa=linha[3];
                     registro.DataDeEntrada=DateTime.Parse(linha[4]);
+
+                    MarcaModel marca = new MarcaModel();
+                    marca.Nome = linha[1];
+                    
+                    ModeloModel modelo = new ModeloModel();
+                    modelo.Nome = linha[2];
+                    
+                    registro.Marca = marca;
+                    registro.Modelo = modelo;
                    
                     listaDeRegistros.Add(registro);
                 }
 
             }
-
             return listaDeRegistros; 
         }
+
+        
     }
 }

@@ -1,0 +1,55 @@
+@model Correcao_estacionamento.ViewModels.HomeViewModel;
+@{
+    Layout = "_Layout";
+}
+
+<h2>Registro de entrada de Veículos</h2> 
+
+<form action="/Home/FiltrarRegistros" method="POST">
+    <label for="data">Data</label>
+    <input type="date" name="data">
+
+    <label for="modelo">Modelo do veiculo:</label>
+    <select name="modelo">
+        <option value="" disabled selected>Selecione</option>
+        
+        @foreach (var item in Model.Modelos)
+        {
+            <option value="@item.Nome">@item.Nome</option>
+        }
+        
+    </select>
+
+    <input type="submit" value="Filtrar">
+</form>
+
+<br>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nome </th>
+            <th>Placa</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Data e Horário de Entrada</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model.Registros){            
+            <tr>
+                <td>@item.Nome</td>
+                <td>@item.Placa</td>
+                <td>@item.Marca.Nome</td>
+                <td>@item.Modelo.Nome</td>
+                <td>@item.DataDeEntrada</td>
+            </tr>
+        }        
+    
+    </tbody>
+
+
+
+</table>

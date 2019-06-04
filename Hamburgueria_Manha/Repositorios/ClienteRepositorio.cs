@@ -7,13 +7,13 @@ using System.Text.RegularExpressions;
 using System;
 
 namespace Hamburgueria_Manha.Repositorios {
-    public class ClienteRepository : BaseRepository {
+    public class ClienteRepositorio : BaseRepository {
         public static uint CONT = 0;
         private const string PATH = "Database/Cliente.csv";
         private const string PATH_INDEX = "Database/Cliente_Id.csv";
         private List<Cliente> clientes = new List<Cliente> ();
 
-        public ClienteRepository()
+        public ClienteRepositorio()
         {
             if (!File.Exists(PATH_INDEX)){
                 File.Create(PATH_INDEX).Close();

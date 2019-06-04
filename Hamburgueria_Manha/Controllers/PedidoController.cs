@@ -9,17 +9,29 @@ namespace Hamburgueria_Manha.Controllers
 {
     public class PedidoController : Controller
     {
+        private const string SESSION_EMAIL = "_EMAIL";
+        private const string SESSION_CLIENTE = "_CLIENTE";
         PedidoRepositorio pedidoRepositorio = new PedidoRepositorio();
         HamburguerRepositorio hamburguerRepositorio = new HamburguerRepositorio();
         ShakeRepositorio shakeRepositorio = new ShakeRepositorio();
+        ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
         
         [HttpGet]
         public IActionResult Index()
         {
+            ViewData["User"] = HttpContext.Session.GetString(SESSION_CLIENTE);
+            PedidoViewModel pedido = new PedidoViewModel();
+            if (!string.IsNullOrEmpty(HttpContext.Session.GetString(SESSION_CLIENTE))){
+                var cliente = clienteRepositorio.ObterPor(HttpContext.Session.GetString(SESSION_EMAIL));
+                pedido.Cliente = cliente;
+            }else
+            {
+                pedido.Cliente = new Cliente();
+            }
+
             var hamburgueres = hamburguerRepositorio.Listar();
             var shakes = shakeRepositorio.Listar();
 
-            PedidoViewModel pedido = new PedidoViewModel();
             pedido.Hamburgueres = hamburgueres;
             pedido.Shakes = shakes;
             
